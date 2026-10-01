@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Luiz Eduardo | Perfil Profissional</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #f3f6fb;
+    --surface: #ffffff;
+    --primary: #17365d;
+    --secondary: #2563eb;
+    --text: #202938;
+    --muted: #697586;
+    --border: #e3e9f2;
+    --shadow: 0 8px 30px rgba(23, 54, 93, 0.07);
+}
+
+[data-theme="dark"] {
+    --background: #101827;
+    --surface: #1c293b;
+    --primary: #91bfff;
+    --secondary: #60a5fa;
+    --text: #f1f5f9;
+    --muted: #b6c2d2;
+    --border: #334155;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    transition: 0.3s;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ==============================
+   NAVEGAÇÃO
+============================== */
+
+header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.theme-btn,
+.menu-btn {
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* ==============================
+   CONTEÚDO
+============================== */
+
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    padding: 55px 0 80px;
+}
+
+/* ==============================
+   APRESENTAÇÃO PRINCIPAL
+============================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 35px;
+    align-items: stretch;
+    margin-bottom: 35px;
+}
+
+.hero-content {
+    background: var(--surface);
+    padding: 55px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 99, 235, 0.09);
+    color: var(--secondary);
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: fit-content;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 15px;
+    letter-spacing: -2px;
+}
+
+.hero-content h2 {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    color: var(--muted);
+    font-size: 0.98rem;
+    max-width: 650px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+/* ==============================
+   CARTÃO DE PERFIL
+============================== */
+
+.profile-card {
+    background: var(--primary);
+    color: white;
+    border-radius: 18px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.profile-photo {
+    width: 175px;
+    height: 175px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 4px solid rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.profile-photo i {
+    font-size: 5rem;
+    color: white;
+}
+
+.profile-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.profile-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.profile-divider {
+    width: 55px;
+    height: 3px;
+    background: #60a5fa;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.profile-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+/* ==============================
+   INFORMAÇÕES RÁPIDAS
+============================== */
+
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 65px;
+}
+
+.info-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow);
+}
+
+.info-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.info-card h4 {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    font-size: 0.88rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+/* ==============================
+   ESTRUTURA DAS SEÇÕES
+============================== */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.section-heading .heading-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--secondary);
+    border-radius: 10px;
+    font-size: 1.15rem;
+}
+
+.section-heading h2 {
+    font-size: 1.35rem;
+    color: var(--primary);
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+/* ==============================
+   SOBRE MIM
+============================== */
+
+.about-text p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.about-text p + p {
+    margin-top: 17px;
+}
+
+/* ==============================
+   EXPERIÊNCIA PROFISSIONAL
+============================== */
+
+.experience-card {
+    position: relative;
+    border-left: 3px solid var(--secondary);
+    padding-left: 25px;
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    width: 15px;
+    height: 15px;
+    background: var(--secondary);
+    border: 3px solid var(--surface);
+    border-radius: 50%;
+}
+
+.experience-date {
+    display: inline-block;
+    color: var(--secondary);
+    background: rgba(37, 99, 235, 0.09);
+    padding: 7px 11px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.experience-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.company-name {
+    font-weight: 700;
+    font-size: 0.93rem;
+    margin-bottom: 7px;
+}
+
+.company-details {
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.experience-description {
+    color: var(--muted);
+    font-size: 0.91rem;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.responsibilities {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.responsibility {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.responsibility i {
+    color: var(--secondary);
+    margin-top: 4px;
+}
+
+/* ==============================
+   HABILIDADES ASSOCIADAS
+============================== */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--secondary);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    padding: 10px 13px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ==============================
+   FORMAÇÃO
+============================== */
+
+.education-item {
+    display: flex;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.education-item:first-child {
+    padding-top: 0;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.education-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-item h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--primary);
+}
+
+.education-item p {
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+/* ==============================
+   COMPETÊNCIAS
+============================== */
+
+.competency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.competency {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.competency i {
+    color: var(--secondary);
+    font-size: 1.05rem;
+    width: 22px;
+    text-align: center;
+}
+
+.competency span {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* ==============================
+   IDIOMAS
+============================== */
+
+.language-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.language-row h3 {
+    font-size: 0.95rem;
+}
+
+.language-level {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--secondary);
+    background: rgba(37, 99, 235, 0.1);
+    padding: 8px 11px;
+    border-radius: 6px;
+}
+
+/* ==============================
+   OBJETIVO PROFISSIONAL
+============================== */
+
+.objective-card {
+    background: var(--primary);
+    color: white;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.objective-card i {
+    color: #93c5fd;
+    font-size: 1.7rem;
+    margin-bottom: 17px;
+}
+
+.objective-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.objective-card p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 30px 7%;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+footer strong {
+    color: var(--primary);
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 950px) {
+
+    .hero {
+        grid-template-columns: 1fr 0.75fr;
+    }
+
+    .hero-content {
+        padding: 35px;
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 17px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--surface);
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border-top: 1px solid var(--border);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 35px;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    main {
+        padding-top: 30px;
+    }
+
+    .hero-content {
+        padding: 28px 22px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-photo i {
+        font-size: 4rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .experience-card {
+        padding-left: 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 1.15rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ==============================
+     CABEÇALHO
+============================== -->
+
+<header>
+
+    <a href="#inicio" class="logo">
+        Luiz<span>.</span>
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#formacao">Formação</a>
+        <a href="#competencias">Competências</a>
+        <a href="#contato">Contato</a>
+
+    </nav>
+
+    <div class="header-actions">
+
+        <button class="theme-btn" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="menu-btn" aria-label="Abrir menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+<div class="container">
+
+    <!-- ==============================
+         APRESENTAÇÃO
+    ============================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                <i class="fas fa-circle-check"></i>
+                Disponível para oportunidades de estágio
+            </span>
+
+            <h1>Luiz Eduardo</h1>
+
+            <h2>Estudante de Gestão Pública</h2>
+
+            <p>
+                Profissional com experiência em controle de estoque,
+                organização de mercadorias e apoio às rotinas
+                administrativas. Atualmente, curso Gestão Pública,
+                buscando ampliar meus conhecimentos e desenvolver
+                minha trajetória profissional nas áreas de
+                administração e gestão.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#experiencia" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i>
+                    Minha experiência
+                </a>
+
+                <a href="#contato" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Entrar em contato
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CARTÃO DE PERFIL -->
+
+        <aside class="profile-card">
+
+            <div class="profile-photo">
+                <img src="../img/IMG_20260405_180619.jpg" alt="Foto de perfil de Luiz Eduardo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
+            </div>
+
+            <h3>Luiz Eduardo</h3>
+
+            <p>Gestão Pública</p>
+
+            <div class="profile-divider"></div>
+
+            <div class="profile-location">
+                <i class="fas fa-location-dot"></i>
+                Gama, Distrito Federal
+            </div>
+
+        </aside>
+
+    </section>
+
+    <!-- ==============================
+         CONTATO RÁPIDO
+    ============================== -->
+
+    <section class="quick-info" id="contato">
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <div>
+                <h4>E-mail</h4>
+                <p>luizeduardocassou04@gmail.com</p>
+            </div>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+
+            <div>
+                <h4>Telefone</h4>
+                <p>(61) 99242-7139</p>
+            </div>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <div>
+                <h4>Localização</h4>
+                <p>Brasília - DF</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==============================
+         CONTEÚDO EM COLUNAS
+    ============================== -->
+
+    <div class="content-layout">
+
+        <!-- COLUNA PRINCIPAL -->
+
+        <div class="main-column">
+
+            <!-- SOBRE MIM -->
+
+            <section class="section" id="sobre">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <h2>Sobre mim</h2>
+
+                </div>
+
+                <div class="card about-text">
+
+                    <p>
+                        Atualmente, curso Gestão Pública, área na qual
+                        venho desenvolvendo conhecimentos em administração
+                        pública, organização de processos, gestão
+                        estratégica e atendimento à sociedade.
+                    </p>
+
+                    <p>
+                        Estou em busca de uma oportunidade de estágio
+                        para adquirir experiência prática e contribuir
+                        de forma positiva com a equipe e a organização.
+                    </p>
+
+                    <p>
+                        Tenho facilidade de comunicação, trabalho bem
+                        em equipe e me considero uma pessoa dedicada,
+                        responsável e comprometida com resultados.
+                        Busco sempre aprender, desenvolver novas
+                        habilidades e enfrentar desafios que contribuam
+                        para meu crescimento profissional e pessoal.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- EXPERIÊNCIA PROFISSIONAL -->
+
+            <section class="section" id="experiencia">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+
+                    <h2>Experiência profissional</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <article class="experience-card">
+
+                        <span class="experience-date">
+                            Janeiro de 2026 - Atual
+                        </span>
+
+                        <h3>Administrador de Estoque</h3>
+
+                        <p class="company-name">
+                            Armarinho Milano Ltda
+                        </p>
+
+                        <p class="company-details">
+                            <i class="fas fa-building"></i>
+                            Tempo integral
+                            <br>
+                            <i class="fas fa-location-dot"></i>
+                            Brasília, Distrito Federal, Brasil
+                            <br>
+                            <i class="fas fa-store"></i>
+                            Atuação presencial
+                        </p>
+
+                        <p class="experience-description">
+                            Atuei como Administrador de Estoque no
+                            Armarinho Milano, sendo responsável pelo
+                            levantamento e controle de estoque,
+                            organização e reposição de mercadorias,
+                            além do remanejamento de produtos conforme
+                            a demanda da loja.
+
+                            Também realizava o acompanhamento e
+                            atualização do estoque por meio de
+                            planilhas no Excel, contribuindo para
+                            a organização, eficiência operacional
+                            e redução de inconsistências no controle
+                            de mercadorias.
+                        </p>
+
+                        <div class="responsibilities">
+
+                            <div class="responsibility">
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Levantamento, monitoramento e
+                                    controle de estoque.
+                                </span>
+                            </div>
+
+                            <div class="responsibility">
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Organização, reposição e
+                                    remanejamento de mercadorias
+                                    conforme a demanda da loja.
+                                </span>
+                            </div>
+
+                            <div class="responsibility">
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Atualização e acompanhamento
+                                    de estoque por meio de
+                                    planilhas no Excel.
+                                </span>
+                            </div>
+
+                            <div class="responsibility">
+                                <i class="fas fa-check-circle"></i>
+                                <span>
+                                    Apoio à eficiência operacional
+                                    e redução de inconsistências
+                                    no controle de mercadorias.
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- OBJETIVO PROFISSIONAL -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+
+                    <h2>Objetivo profissional</h2>
+
+                </div>
+
+                <div class="objective-card">
+
+                    <i class="fas fa-graduation-cap"></i>
+
+                    <h3>Estágio em Gestão Pública</h3>
+
+                    <p>
+                        Busco uma oportunidade de estágio que me permita
+                        aplicar os conhecimentos adquiridos durante
+                        minha formação acadêmica, desenvolver experiência
+                        prática e contribuir para a organização,
+                        eficiência e melhoria dos processos
+                        administrativos.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- COLUNA LATERAL -->
+
+        <aside class="sidebar">
+
+            <!-- FORMAÇÃO -->
+
+            <section class="section" id="formacao">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+
+                    <h2>Formação</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="education-item">
+
+                        <div class="education-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Gestão Pública</h3>
+
+                            <p>
+                                Gran Faculdade
+                            </p>
+
+                            <p>
+                                2024 - 2028
+                            </p>
+
+                            <p>
+                                Graduação em andamento
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="education-item">
+
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Ensino Médio</h3>
+
+                            <p>
+                                Centro de Ensino Médio 01 do Gama
+                            </p>
+
+                            <p>
+                                2020 - 2022
+                            </p>
+
+                            <p>
+                                Concluído
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="education-item">
+
+                        <div class="education-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Curso de Inglês</h3>
+
+                            <p>
+                                Centro Interescolar de Línguas do Gama
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- HABILIDADES -->
+
+            <section class="section" id="competencias">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+
+                    <h2>Competências</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            Gestão de estoque
+                        </span>
+
+                        <span class="skill-tag">
+                            Excel intermediário
+                        </span>
+
+                        <span class="skill-tag">
+                            Controle via Excel
+                        </span>
+
+                        <span class="skill-tag">
+                            Monitoramento
+                        </span>
+
+                        <span class="skill-tag">
+                            Pacote Office
+                        </span>
+
+                        <span class="skill-tag">
+                            Power BI
+                        </span>
+
+                        <span class="skill-tag">
+                            Rotinas administrativas
+                        </span>
+
+                        <span class="skill-tag">
+                            Organização de processos
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- COMPETÊNCIAS PESSOAIS -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <h2>Perfil profissional</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="competency-list">
+
+                        <div class="competency">
+                            <i class="fas fa-comments"></i>
+                            <span>Boa comunicação</span>
+                        </div>
+
+                        <div class="competency">
+                            <i class="fas fa-people-group"></i>
+                            <span>Trabalho em equipe</span>
+                        </div>
+
+                        <div class="competency">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Organização</span>
+                        </div>
+
+                        <div class="competency">
+                            <i class="fas fa-brain"></i>
+                            <span>Aprendizado contínuo</span>
+                        </div>
+
+                        <div class="competency">
+                            <i class="fas fa-medal"></i>
+                            <span>Responsabilidade</span>
+                        </div>
+
+                        <div class="competency">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Comprometimento com resultados</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- IDIOMAS -->
+
+            <section class="section">
+
+                <div class="section-heading">
+
+                    <div class="heading-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+
+                    <h2>Idiomas</h2>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="language-row">
+
+                        <h3>Inglês</h3>
+
+                        <span class="language-level">
+                            Intermediário
+                        </span>
+
+                    </div>
+                    <div class="language-row">
+
+                        <h3>Português</h3>
+
+                        <span class="language-level">
+                            Nativo
+                        </span>
+
+                    </div>
+                    <div class="language-row">
+
+                        <h3>Espanhol</h3>
+
+                        <span class="language-level">
+                            Básico
+                        </span>
+
+                    </div>
+                    <div class="language-row">
+
+                        <h3>Francês</h3>
+
+                        <span class="language-level">
+                            Básico
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+    </div>
+
+</div>
+
+</main>
+
+<!-- ==============================
+     RODAPÉ
+============================== -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>Luiz Eduardo</strong> —
+        Currículo Profissional
+    </p>
+
+    <p style="margin-top: 8px;">
+        Gestão Pública | Administração | Desenvolvimento Profissional
+    </p>
+
+</footer>
+
+<!-- ==============================
+     JAVASCRIPT
+============================== -->
+
+<script>
+
+// Alternância entre modo claro e escuro
+
+const themeButton = document.querySelector(".theme-btn");
+
+themeButton.addEventListener("click", function () {
+
+    const darkMode = document.body.dataset.theme === "dark";
+
+    document.body.dataset.theme = darkMode ? "" : "dark";
+
+    const icon = themeButton.querySelector("i");
+
+    icon.classList.toggle("fa-moon", darkMode);
+    icon.classList.toggle("fa-sun", !darkMode);
+
+});
+
+
+// Menu para dispositivos móveis
+
+const menuButton = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuButton.addEventListener("click", function () {
+
+    navLinks.classList.toggle("active");
+
+    const icon = menuButton.querySelector("i");
+
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+
+});
+
+
+// Fechar menu ao selecionar uma seção
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navLinks.classList.remove("active");
+
+        const icon = menuButton.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
